@@ -1,0 +1,215 @@
+/* =========================================================================
+   ESCOLA CAN SERRA · DESIGN TOKENS
+   "5 colors · 1 serralada · molts cims"
+   -------------------------------------------------------------------------
+   Capa 1 — Primitius: els valors crus (colors del logotip refinats, maó de
+            la façana, tintes neutres).
+   Capa 2 — Semàntics: el significat (fons, text, accent, cicle...).
+   Els components NOMÉS han d'usar tokens semàntics.
+   ========================================================================= */
+
+:root {
+  /* ---------- 1. PRIMITIUS · Els 5 cims ---------------------------------- */
+  /* Vermell Cim — logotip original #FF0000 */
+  --vermell-50:  #fff1ef;
+  --vermell-100: #ffdcd6;
+  --vermell-300: #ff8f82;
+  --vermell-500: #ec3a2b;
+  --vermell-600: #d42a1c;   /* per a fons amb text blanc (5.06:1) */
+  --vermell-700: #b8231a;
+  --vermell-800: #8f1c15;
+
+  /* Blau Cel — logotip original #1EA3FD */
+  --blau-50:  #eef8ff;
+  --blau-100: #d3edfd;
+  --blau-300: #7cc8f6;
+  --blau-500: #1c9be6;
+  --blau-600: #1487cc;
+  --blau-700: #0a6aa4;
+  --blau-800: #0b5382;
+
+  /* Groc Sol — logotip original #F0FF00 */
+  --groc-50:  #fffce3;
+  --groc-100: #fff5ad;
+  --groc-300: #ffe95a;
+  --groc-500: #ffd60a;
+  --groc-600: #e6b800;
+  --groc-700: #a88600;
+  --groc-800: #6f5a00;
+
+  /* Verd Farigola — logotip original #13D813 */
+  --verd-50:  #edfbf0;
+  --verd-100: #cdf3d6;
+  --verd-300: #7fdc95;
+  --verd-500: #22b14c;
+  --verd-600: #1c9a41;
+  --verd-700: #157a33;
+  --verd-800: #0f5d27;
+
+  /* Negre Serralada — el cinquè cim */
+  --tinta-950: #0f0f14;
+  --tinta-900: #16161d;
+  --tinta-800: #24242e;
+  --tinta-700: #3a3a47;
+  --tinta-500: #6a6a78;
+  --tinta-300: #b8b4ab;
+  --tinta-200: #ddd7cb;
+  --tinta-100: #eee8dc;
+  --tinta-50:  #f7f2e8;
+  --paper:     #fffbf3;
+
+  /* Maó — la façana de 1978 */
+  --mao-100: #f7e3d9;
+  --mao-500: #b9593b;
+  --mao-700: #8a3f28;
+
+  /* ---------- 2. TIPOGRAFIA --------------------------------------------- */
+  --font-display: "Bricolage Grotesque", "Arial Rounded MT Bold", system-ui, sans-serif;
+  --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
+  --font-hand: "Caveat", "Comic Sans MS", cursive;
+
+  /* Escala fluida (mòbil → escriptori) */
+  --text-xs:   0.8125rem;                                   /* 13 */
+  --text-sm:   0.9375rem;                                   /* 15 */
+  --text-base: 1.0625rem;                                   /* 17 */
+  --text-lg:   clamp(1.125rem, 1rem + 0.4vw, 1.3125rem);    /* 18 → 21 */
+  --text-xl:   clamp(1.3125rem, 1.1rem + 0.8vw, 1.625rem);  /* 21 → 26 */
+  --text-2xl:  clamp(1.75rem, 1.3rem + 1.8vw, 2.625rem);    /* 28 → 42 */
+  --text-3xl:  clamp(2.25rem, 1.5rem + 3vw, 3.75rem);       /* 36 → 60 */
+  --text-hero: clamp(2.75rem, 1.4rem + 5.6vw, 6rem);        /* 44 → 96 */
+
+  --leading-tight: 1.02;
+  --leading-snug: 1.2;
+  --leading-body: 1.6;
+  --tracking-tight: -0.035em;
+
+  /* ---------- 3. ESPAI (base 4px) --------------------------------------- */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+  --section-y: clamp(4rem, 3rem + 5vw, 8rem);
+  --gutter: clamp(1rem, 0.5rem + 2.5vw, 2rem);
+  --container: 1240px;
+
+  /* ---------- 4. FORMA -------------------------------------------------- */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --radius-xl: 32px;
+  --radius-pill: 999px;
+  --border-w: 2px;
+
+  /* ---------- 5. MOVIMENT ----------------------------------------------- */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --dur-fast: 140ms;
+  --dur-base: 260ms;
+  --dur-slow: 700ms;
+
+  /* ---------- 6. PATRONS DE MARCA --------------------------------------- */
+  /* Les lames de colors de la façana, en l'ordre (irregular) real */
+  --lames: linear-gradient(90deg,
+    var(--verd-500) 0 4%, var(--blau-500) 0 8%, var(--groc-500) 0 12%,
+    var(--vermell-500) 0 16%, var(--blau-500) 0 20%, var(--verd-500) 0 24%,
+    var(--groc-500) 0 28%, var(--blau-500) 0 32%, var(--vermell-500) 0 36%,
+    var(--verd-500) 0 40%, var(--groc-500) 0 44%, var(--verd-500) 0 48%,
+    var(--vermell-500) 0 52%, var(--groc-500) 0 56%, var(--blau-500) 0 60%,
+    var(--verd-500) 0 64%, var(--vermell-500) 0 68%, var(--blau-500) 0 72%,
+    var(--groc-500) 0 76%, var(--vermell-500) 0 80%, var(--blau-500) 0 84%,
+    var(--vermell-500) 0 88%, var(--verd-500) 0 92%, var(--blau-500) 0 96%,
+    var(--groc-500) 0 100%);
+
+  /* ---------- 7. SEMÀNTICS · Tema clar ---------------------------------- */
+  color-scheme: light;
+  --bg: var(--paper);
+  --bg-sunken: var(--tinta-50);
+  --surface: #ffffff;
+  --surface-2: var(--tinta-50);
+  --surface-inverse: var(--tinta-900);
+  --text: var(--tinta-900);
+  --text-muted: var(--tinta-700);
+  --text-subtle: var(--tinta-500);
+  --text-inverse: var(--paper);
+  --line: var(--tinta-200);
+  --line-strong: var(--tinta-900);
+  --focus: var(--blau-500);
+  --inverse-accent: var(--groc-500);   /* accent sobre superfícies invertides */
+
+  --accent: var(--vermell-500);
+  --accent-text: var(--vermell-700);
+  --on-accent: #ffffff;
+
+  --shadow-sticker: 4px 4px 0 var(--line-strong);
+  --shadow-sticker-lg: 7px 7px 0 var(--line-strong);
+  --shadow-soft: 0 1px 2px rgb(22 22 29 / 0.06), 0 8px 24px -8px rgb(22 22 29 / 0.14);
+  --shadow-float: 0 24px 60px -20px rgb(22 22 29 / 0.28);
+
+  /* Codi de color per etapes (1 color = 1 etapa) */
+  --infantil: var(--groc-500);   --infantil-soft: var(--groc-100);   --infantil-text: var(--groc-800);
+  --inicial:  var(--verd-500);   --inicial-soft:  var(--verd-100);   --inicial-text:  var(--verd-800);
+  --mitja:    var(--blau-500);   --mitja-soft:    var(--blau-100);   --mitja-text:    var(--blau-800);
+  --superior: var(--vermell-600);--superior-soft: var(--vermell-100);--superior-text: var(--vermell-800);
+  --comunitat:var(--tinta-900);  --comunitat-soft:var(--tinta-100);  --comunitat-text:var(--tinta-900);
+}
+
+/* ---------- 8. SEMÀNTICS · Tema fosc ------------------------------------ */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: var(--tinta-950);
+    --bg-sunken: #0b0b0f;
+    --surface: var(--tinta-900);
+    --surface-2: var(--tinta-800);
+    --surface-inverse: var(--tinta-50);
+    --text: #f6f1e7;
+    --text-muted: #cfc9bd;
+    --text-subtle: #9a978f;
+    --text-inverse: var(--tinta-900);
+    --line: #33333f;
+    --line-strong: #f6f1e7;
+    --accent: #ff5a4a;
+    --accent-text: #ff8f82;
+    --inverse-accent: var(--vermell-700);
+    --shadow-sticker: 4px 4px 0 #000;
+    --shadow-sticker-lg: 7px 7px 0 #000;
+    --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -8px rgb(0 0 0 / 0.6);
+    --shadow-float: 0 24px 60px -20px rgb(0 0 0 / 0.7);
+    --infantil-soft: rgb(255 214 10 / 0.16);  --infantil-text: var(--groc-300);
+    --inicial-soft:  rgb(34 177 76 / 0.18);   --inicial-text:  var(--verd-300);
+    --mitja-soft:    rgb(28 155 230 / 0.18);  --mitja-text:    var(--blau-300);
+    --superior-soft: rgb(236 58 43 / 0.18);   --superior-text: var(--vermell-300);
+    --comunitat: #f6f1e7; --comunitat-soft: rgb(246 241 231 / 0.1); --comunitat-text: #f6f1e7;
+  }
+}
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: var(--tinta-950);
+  --bg-sunken: #0b0b0f;
+  --surface: var(--tinta-900);
+  --surface-2: var(--tinta-800);
+  --surface-inverse: var(--tinta-50);
+  --text: #f6f1e7;
+  --text-muted: #cfc9bd;
+  --text-subtle: #9a978f;
+  --text-inverse: var(--tinta-900);
+  --line: #33333f;
+  --line-strong: #f6f1e7;
+  --accent: #ff5a4a;
+  --accent-text: #ff8f82;
+  --inverse-accent: var(--vermell-700);
+  --shadow-sticker: 4px 4px 0 #000;
+  --shadow-sticker-lg: 7px 7px 0 #000;
+  --shadow-soft: 0 1px 2px rgb(0 0 0 / 0.4), 0 8px 24px -8px rgb(0 0 0 / 0.6);
+  --shadow-float: 0 24px 60px -20px rgb(0 0 0 / 0.7);
+  --infantil-soft: rgb(255 214 10 / 0.16);  --infantil-text: var(--groc-300);
+  --inicial-soft:  rgb(34 177 76 / 0.18);   --inicial-text:  var(--verd-300);
+  --mitja-soft:    rgb(28 155 230 / 0.18);  --mitja-text:    var(--blau-300);
+  --superior-soft: rgb(236 58 43 / 0.18);   --superior-text: var(--vermell-300);
+  --comunitat: #f6f1e7; --comunitat-soft: rgb(246 241 231 / 0.1); --comunitat-text: #f6f1e7;
+}

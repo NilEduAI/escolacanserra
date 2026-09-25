@@ -1,0 +1,862 @@
+<!doctype html>
+<html lang="ca" class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Escola Can Serra · Barberà del Vallès</title>
+  <meta name="description" content="Escola pública d'educació infantil i primària a Barberà del Vallès. 5 colors, 1 serralada, molts cims. Des de 1978.">
+  <meta name="theme-color" content="#fffbf3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f0f14" media="(prefers-color-scheme: dark)">
+  <meta property="og:title" content="Escola Can Serra · 5 colors, 1 serralada, molts cims">
+  <meta property="og:description" content="Escola pública d'infantil i primària a Barberà del Vallès, des de 1978.">
+  <meta property="og:image" content="assets/img/facana.jpg">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Cpolygon points='0,52 24,6 48,52' fill='%23ec3a2b'/%3E%3Cpolygon points='36,52 60,6 84,52' fill='%231c9be6'/%3E%3Cpolygon points='72,52 96,6 120,52' fill='%23ffd60a'/%3E%3Cpolygon points='18,80 42,34 66,80' fill='%2322b14c'/%3E%3Cpolygon points='54,80 78,34 102,80' fill='%2316161d'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600;700&display=swap">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t;var s=localStorage.getItem('cs-size');if(s)document.documentElement.style.fontSize=[100,112.5,125][+s]+'%'}catch(e){}</script>
+</head>
+<body>
+<!-- sprite:start -->
+<svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <!-- LOGOTIP · isotip dels 5 cims (el negre segueix currentColor per al mode fosc) -->
+  <symbol id="logo-cims" viewBox="0 0 120 80">
+    <polygon points="0,52 24,6 48,52" style="fill:var(--vermell-500)"/>
+    <polygon points="36,52 60,6 84,52" style="fill:var(--blau-500)"/>
+    <polygon points="72,52 96,6 120,52" style="fill:var(--groc-500)"/>
+    <polygon points="18,80 42,34 66,80" style="fill:var(--verd-500)"/>
+    <polygon points="54,80 78,34 102,80" style="fill:currentColor"/>
+  </symbol>
+  <symbol id="peak" viewBox="0 0 100 80"><polygon points="0,80 50,0 100,80"/></symbol>
+
+  <!-- ICONES · traç 2px, 24×24, puntes arrodonides -->
+  <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+  <symbol id="i-arrow-ur" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+  <symbol id="i-chev-l" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-chev-r" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></symbol>
+  <symbol id="i-moon" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></symbol>
+  <symbol id="i-type" viewBox="0 0 24 24"><path d="M3 7V5h11v2M8.5 5v14M6 19h5"/><path d="M14 13v-1h7v1M17.5 12v7M16 19h3"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="3"/><path d="M16 2v4M8 2v4M3 10h18"/><path d="M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01"/></symbol>
+  <symbol id="i-utensils" viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-grad" viewBox="0 0 24 24"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/><path d="M22 10v6"/></symbol>
+  <symbol id="i-flask" viewBox="0 0 24 24"><path d="M10 2v7.31"/><path d="M14 9.3V2"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></symbol>
+  <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.93 0 1.65-.75 1.65-1.69 0-.44-.18-.83-.44-1.12-.29-.29-.44-.65-.44-1.13a1.64 1.64 0 0 1 1.67-1.67h2c3.05 0 5.56-2.5 5.56-5.55C21.97 6.01 17.46 2 12 2z"/><circle cx="13.5" cy="6.5" r="1.2"/><circle cx="17.5" cy="10.5" r="1.2"/><circle cx="8.5" cy="7.5" r="1.2"/><circle cx="6.5" cy="12.5" r="1.2"/></symbol>
+  <symbol id="i-ear" viewBox="0 0 24 24"><path d="M6 8.5a6.5 6.5 0 1 1 13 0c0 6-6 6-6 10a3.5 3.5 0 1 1-7 0"/><path d="M15 8.5a2.5 2.5 0 0 0-5 0v1a2 2 0 1 1 0 4"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-lang" viewBox="0 0 24 24"><path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><path d="M17.5 6.5h.01"/></symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></symbol>
+  <symbol id="i-youtube" viewBox="0 0 24 24"><path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/><path d="m10 15 5-3-5-3z"/></symbol>
+  <symbol id="i-apple" viewBox="0 0 24 24"><path d="M12 20.94c1.5 0 2.75 1.06 4 1.06 3 0 6-8 6-12.22A4.91 4.91 0 0 0 17 5c-2.22 0-4 1.44-5 2-1-.56-2.78-2-5-2a4.9 4.9 0 0 0-5 4.78C2 14 5 22 8 22c1.25 0 2.5-1.06 4-1.06Z"/><path d="M10 2c1 .5 2 2 2 5"/></symbol>
+  <symbol id="i-wrench" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-leaf" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></symbol>
+  <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+  <symbol id="i-tent" viewBox="0 0 24 24"><path d="M3.5 21 14 3"/><path d="M20.5 21 10 3"/><path d="M15.5 21 12 15l-3.5 6"/><path d="M2 21h20"/></symbol>
+  <symbol id="i-backpack" viewBox="0 0 24 24"><path d="M4 10a4 4 0 0 1 4-4h8a4 4 0 0 1 4 4v10a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2Z"/><path d="M8 10h8"/><path d="M8 18h8"/><path d="M8 22v-6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v6"/><path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/></symbol>
+  <symbol id="i-star" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></symbol>
+  <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.94 15.5A2 2 0 0 0 8.5 14.06l-6.13-1.58a.5.5 0 0 1 0-.96L8.5 9.94A2 2 0 0 0 9.94 8.5l1.58-6.13a.5.5 0 0 1 .96 0L14.06 8.5A2 2 0 0 0 15.5 9.94l6.13 1.58a.5.5 0 0 1 0 .96L15.5 14.06a2 2 0 0 0-1.44 1.44l-1.58 6.13a.5.5 0 0 1-.96 0z"/><path d="M20 3v4M22 5h-4"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5Z"/><path d="M14 2v6h6"/><path d="M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-access" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></symbol>
+  <symbol id="i-school" viewBox="0 0 24 24"><path d="M14 22v-4a2 2 0 1 0-4 0v4"/><path d="m18 10 4 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8l4-2"/><path d="M18 5v17"/><path d="m4 6 8-4 8 4"/><path d="M6 5v17"/><circle cx="12" cy="9" r="2"/></symbol>
+  <symbol id="i-box" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-megaphone" viewBox="0 0 24 24"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></symbol>
+  <symbol id="i-equal" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 10h8M8 14h8"/></symbol>
+  <symbol id="i-board" viewBox="0 0 24 24"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M8 12h.01M12 12h.01M16 12h.01"/></symbol>
+  <symbol id="i-trophy" viewBox="0 0 24 24"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"/><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"/><path d="M4 22h16"/><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"/><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"/><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z"/></symbol>
+  <symbol id="i-lift" viewBox="0 0 24 24"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="m9 8 3-3 3 3M9 16l3 3 3-3"/></symbol>
+  <symbol id="i-monitor" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></symbol>
+  <symbol id="i-chef" viewBox="0 0 24 24"><path d="M17 21a1 1 0 0 0 1-1v-5.35c0-.46.32-.84.73-1.04a4 4 0 0 0-2.14-7.59 5 5 0 0 0-9.18 0 4 4 0 0 0-2.14 7.59c.41.2.73.58.73 1.04V20a1 1 0 0 0 1 1Z"/><path d="M6 17h12"/></symbol>
+  <symbol id="i-mask" viewBox="0 0 24 24"><path d="M4 4h16v6a8 8 0 0 1-16 0Z"/><path d="M9 9h.01M15 9h.01"/><path d="M9 13a3.5 3.5 0 0 0 6 0"/></symbol>
+  <symbol id="i-ball" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 2v20M2 12h20"/><path d="M4.9 4.9a10 10 0 0 1 0 14.2M19.1 4.9a10 10 0 0 0 0 14.2"/></symbol>
+  <symbol id="i-tree" viewBox="0 0 24 24"><path d="M12 2 6 10h3l-4 6h14l-4-6h3Z"/><path d="M12 16v6"/></symbol>
+  <symbol id="i-wand" viewBox="0 0 24 24"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/><path d="m14 7 3 3"/><path d="M5 6v4M19 14v4M10 2v2M7 8H3M21 16h-4M11 3H9"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-copy" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9"/><path d="M10.3 21a1.94 1.94 0 0 0 3.4 0"/></symbol>
+  <symbol id="i-sprout" viewBox="0 0 24 24"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></symbol>
+  <symbol id="i-microscope" viewBox="0 0 24 24"><path d="M6 18h8"/><path d="M3 22h18"/><path d="M14 22a7 7 0 1 0 0-14h-1"/><path d="M9 14h2"/><path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z"/><path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3"/></symbol>
+  <symbol id="i-mountain" viewBox="0 0 24 24"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></symbol>
+  <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+</svg>
+<!-- sprite:end -->
+
+<a class="skip-link" href="#main">Salta al contingut</a>
+
+<div class="proto-bar"><b>Proposta</b> de nou web per a l'Escola Can Serra · prototip navegable · <a href="design-system.html">Descobreix el design system →</a></div>
+
+<header class="site-header" data-header>
+  <div class="container header-inner">
+    <a class="brand" href="#inici" aria-label="Escola Can Serra, inici">
+      <svg class="brand-mark" aria-hidden="true"><use href="#logo-cims"/></svg>
+      <span class="brand-text"><span class="brand-escola">Escola</span><span class="brand-name">Can Serra</span></span>
+    </a>
+
+    <nav class="main-nav" id="main-nav" aria-label="Navegació principal" data-nav>
+      <ul>
+        <li><a href="#escola">L'escola</a></li>
+        <li><a href="#projecte">Projecte</a></li>
+        <li><a href="#nivells">Nivells</a></li>
+        <li><a href="#families">Famílies</a></li>
+        <li><a href="#noticies">Notícies</a></li>
+        <li><a href="#contacte">Contacte</a></li>
+      </ul>
+      <a class="btn btn-primary nav-cta-mobile" href="#portes-obertes">Portes obertes <svg class="icon icon-arrow"><use href="#i-arrow"/></svg></a>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" type="button" data-size-toggle aria-label="Canvia la mida del text" title="Mida del text"><svg class="icon" aria-hidden="true"><use href="#i-type"/></svg></button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Canvia entre mode clar i fosc" title="Mode clar / fosc"><svg class="icon" aria-hidden="true"><use href="#i-moon"/></svg></button>
+      <a class="btn btn-primary btn-sm" href="#portes-obertes">Portes obertes</a>
+      <button class="icon-btn menu-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Obre el menú" data-menu-toggle><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
+    </div>
+  </div>
+  <div class="lames-strip" aria-hidden="true"></div>
+</header>
+
+<main id="main">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="inici">
+    <div class="container">
+      <div class="hero-top">
+        <div>
+          <p class="eyebrow">Escola pública · Infantil i primària · Barberà del Vallès</p>
+          <h1 class="hero-title">
+            <span class="num">5</span> <span class="word-colors" aria-label="colors"><span>c</span><span>o</span><span>l</span><span>o</span><span>r</span><span>s</span></span>,<br>
+            <span class="num">1</span> serralada,<br>
+            <span class="marker">molts cims.</span>
+          </h1>
+        </div>
+        <div class="hero-side">
+          <p class="lead">Des de 1978 acompanyem infants de 3 a 12 anys a créixer curiosos, crítics i feliços. Una escola catalana, inclusiva i coeducadora on cada infant troba el seu cim.</p>
+          <div class="hero-ctas">
+            <a class="btn btn-primary btn-lg" href="#escola">Descobreix l'escola <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+            <a class="btn btn-lg" href="#portes-obertes">Preinscripció</a>
+          </div>
+          <ul class="hero-facts">
+            <li><strong data-count="48">48</strong><span>anys d'història</span></li>
+            <li><strong>I3 → 6è</strong><span>9 cursos</span></li>
+            <li><strong data-count="18">18</strong><span>grups · 2 línies</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <figure class="hero-photo">
+          <img src="assets/img/facana.jpg" alt="Façana de maó de l'Escola Can Serra amb les persianes de lames verticals vermelles, blaves, grogues i verdes" width="1541" height="482" fetchpriority="high">
+          <figcaption>Les lames de colors de la nostra façana</figcaption>
+        </figure>
+        <svg class="hero-peaks peaks" viewBox="0 0 260 160" aria-hidden="true">
+          <polygon class="p-b" points="40,160 100,40 160,160"/>
+          <polygon class="p-y" points="110,160 180,18 250,160"/>
+          <polygon class="p-r" points="0,160 55,62 110,160"/>
+          <polygon class="p-g" points="70,160 135,78 200,160"/>
+          <polygon class="p-k" points="150,160 205,98 260,160"/>
+        </svg>
+        <div class="stamp" aria-hidden="true">
+          <svg viewBox="0 0 128 128">
+            <defs><path id="stamp-circle" d="M64,64 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs>
+            <text><textPath href="#stamp-circle" textLength="312" lengthAdjust="spacing">Escola pública · Barberà del Vallès ·</textPath></text>
+          </svg>
+          <div class="stamp-center"><small>des de</small><b>1978</b></div>
+        </div>
+        <div class="float-card float-fruit" data-cycle="inicial">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-apple"/></svg></span>
+          <div><b>Cada dimecres</b><span>és el Dia de la fruita</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= ACCÉS RÀPID ================= -->
+  <section class="quick" aria-label="Accés ràpid">
+    <div class="container">
+      <ul class="quick-grid">
+        <li><a class="quick-tile" data-cycle="inicial" href="https://classroom.google.com/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-board"/></svg></span><span>Classroom<small>Aula virtual</small></span></a></li>
+        <li><a class="quick-tile" data-cycle="mitja" href="https://app.dinantia.com/login"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-chat"/></svg></span><span>Dinantia<small>Comunicació</small></span></a></li>
+        <li><a class="quick-tile" data-cycle="superior" href="https://agora.xtec.cat/escolacanserra/serveis/menjador-escolar/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg></span><span>Menjador<small>Menús i servei</small></span></a></li>
+        <li><a class="quick-tile" data-cycle="infantil" href="https://agora.xtec.cat/escolacanserra/cursactual/calendari-del-curs/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-calendar"/></svg></span><span>Calendari<small>Curs 26-27</small></span></a></li>
+        <li><a class="quick-tile" data-cycle="comunitat" href="https://afacanserra.cat/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span><span>AFA<small>Famílies</small></span></a></li>
+        <li><a class="quick-tile" data-cycle="mitja" href="https://agora.xtec.cat/escolacanserra/projecte-educatiu/biblioteca-extraescolar-gratuita/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><span>Biblioteca<small>V. Gubianas</small></span></a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= L'ESCOLA ================= -->
+  <section class="section" id="escola">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">L'escola</p>
+        <h2>Una escola on hi cap <span class="marker">tothom</span>.</h2>
+        <p class="lead">El nostre emblema són cinc cims que se superposen: com les anelles olímpiques, com els cinc continents. Diversos, però units en una mateixa serralada.</p>
+      </header>
+
+      <div class="traits">
+        <article class="trait reveal" data-cycle="superior">
+          <span class="trait-num">01</span><h3>Catalana</h3>
+          <p>El català és la llengua pròpia i vehicular d'ensenyament i aprenentatge. Plenament en català des de 1989.</p>
+          <svg class="trait-peak" aria-hidden="true"><use href="#peak"/></svg>
+        </article>
+        <article class="trait reveal" data-cycle="mitja" style="--d:80ms">
+          <span class="trait-num">02</span><h3>Plural</h3>
+          <p>Respectem les diferents maneres de pensar i som oberts a tothom, sigui quin sigui el seu origen.</p>
+          <svg class="trait-peak" aria-hidden="true"><use href="#peak"/></svg>
+        </article>
+        <article class="trait reveal" data-cycle="infantil" style="--d:160ms">
+          <span class="trait-num">03</span><h3>Coeducadora</h3>
+          <p>Eduquem per a la convivència i el respecte, sense cap discriminació per raó de sexe o d'orientació sexual.</p>
+          <svg class="trait-peak" aria-hidden="true"><use href="#peak"/></svg>
+        </article>
+        <article class="trait reveal" data-cycle="inicial">
+          <span class="trait-num">04</span><h3>Solidària</h3>
+          <p>Eduquem per la justícia, la solidaritat, la tolerància i la no-discriminació.</p>
+          <svg class="trait-peak" aria-hidden="true"><use href="#peak"/></svg>
+        </article>
+        <article class="trait reveal" data-cycle="comunitat" style="--d:80ms">
+          <span class="trait-num">05</span><h3>Inclusiva</h3>
+          <p>Cada infant és únic. Potenciem les capacitats i l'autoestima de tothom en una escola sense barreres arquitectòniques.</p>
+          <svg class="trait-peak" aria-hidden="true"><use href="#peak"/></svg>
+        </article>
+        <article class="trait reveal" data-cycle="superior" style="--d:160ms">
+          <span class="trait-num">06</span><h3>Socialitzadora</h3>
+          <p>Aprenem a resoldre dificultats i a conèixer els drets i deures que comporta viure en comunitat.</p>
+          <svg class="trait-peak" aria-hidden="true"><use href="#peak"/></svg>
+        </article>
+      </div>
+
+      <div class="values">
+        <span class="values-label">i els valors que ens mouen…</span>
+        <div class="marquee">
+          <ul class="marquee-track">
+            <li class="chip" data-cycle="superior"><span class="dot"></span>Tolerància i respecte</li>
+            <li class="chip" data-cycle="mitja"><span class="dot"></span>Convivència</li>
+            <li class="chip" data-cycle="inicial"><span class="dot"></span>Estima per la natura</li>
+            <li class="chip" data-cycle="infantil"><span class="dot"></span>Estima per la cultura del país</li>
+            <li class="chip" data-cycle="comunitat"><span class="dot"></span>Autonomia</li>
+            <li class="chip" data-cycle="superior"><span class="dot"></span>Autoestima</li>
+            <li class="chip" data-cycle="mitja"><span class="dot"></span>Cooperació</li>
+            <li class="chip" data-cycle="inicial"><span class="dot"></span>Escolta</li>
+            <li class="chip" data-cycle="superior" aria-hidden="true"><span class="dot"></span>Tolerància i respecte</li>
+            <li class="chip" data-cycle="mitja" aria-hidden="true"><span class="dot"></span>Convivència</li>
+            <li class="chip" data-cycle="inicial" aria-hidden="true"><span class="dot"></span>Estima per la natura</li>
+            <li class="chip" data-cycle="infantil" aria-hidden="true"><span class="dot"></span>Estima per la cultura del país</li>
+            <li class="chip" data-cycle="comunitat" aria-hidden="true"><span class="dot"></span>Autonomia</li>
+            <li class="chip" data-cycle="superior" aria-hidden="true"><span class="dot"></span>Autoestima</li>
+            <li class="chip" data-cycle="mitja" aria-hidden="true"><span class="dot"></span>Cooperació</li>
+            <li class="chip" data-cycle="inicial" aria-hidden="true"><span class="dot"></span>Escolta</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PROJECTE: ELS NOSTRES CIMS ================= -->
+  <section class="section section-sunken" id="projecte">
+    <div class="container">
+      <header class="section-head split reveal">
+        <div style="display:grid;gap:1rem;max-width:720px">
+          <p class="eyebrow">Projecte educatiu</p>
+          <h2>Els nostres cims</h2>
+          <p class="lead">Projectes que fan que aprendre a Can Serra sigui investigar, llegir, crear, escoltar-se i fer comunitat.</p>
+        </div>
+        <a class="link-arrow" href="https://agora.xtec.cat/escolacanserra/lescola/projecte-educatiu/">Tot el projecte educatiu <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a>
+      </header>
+
+      <div class="bento">
+        <article class="card card-big card-fill reveal" data-cycle="mitja">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg></span>
+          <h3>Science: fem ciència en anglès</h3>
+          <p>Amb metodologia AICLE, experimentem, ens fem preguntes i ho expliquem en anglès. I cada juny ho ensenyem a tothom a la nostra fira de ciència.</p>
+          <div class="card-foot" style="align-items:end;justify-content:space-between;width:100%">
+            <div class="big-stat">4<sup>a</sup></div>
+            <span class="tag">Science Fair 2026 · 4t, 5è i 6è</span>
+          </div>
+          <svg class="card-deco" viewBox="0 0 220 160" aria-hidden="true" ><polygon points="0,160 70,40 140,160"/><polygon points="80,160 150,10 220,160"/></svg>
+        </article>
+
+        <article class="card card-tall card-fill reveal" data-cycle="infantil" style="--d:80ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span>
+          <h3>Totes i tots llegim!</h3>
+          <p>El pla lector de l'escola, de I3 a 6è.</p>
+          <ul class="card-list">
+            <li>Àlbums il·lustrats</li>
+            <li>Apadrinament lector entre grans i petits</li>
+            <li>Autores i autors que ens visiten</li>
+            <li>Jocs Florals per Sant Jordi</li>
+          </ul>
+          <svg class="card-deco" viewBox="0 0 220 160" aria-hidden="true"><polygon points="40,160 120,30 200,160"/></svg>
+        </article>
+
+        <article class="card reveal" data-cycle="inicial" style="--d:160ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg></span>
+          <h3>Caixes d'investigació</h3>
+          <p>Materials per descobrir, manipular i formular hipòtesis com veritables científiques.</p>
+        </article>
+
+        <article class="card reveal" data-cycle="superior" style="--d:240ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-ear"/></svg></span>
+          <h3>Escolta'm</h3>
+          <p>Cada setmana, una hora de tutoria en petit grup de 3 infants per escoltar-nos de veritat.</p>
+        </article>
+
+        <article class="card card-wide card-dark reveal">
+          <div class="femart-bars" aria-hidden="true"></div>
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-palette"/></svg></span>
+          <h3>FemArt</h3>
+          <p style="max-width:40ch">Expressió artística amb mirada feminista: descobrim les dones artistes que la història va oblidar, en xarxa amb l'Institut Can Planas.</p>
+        </article>
+
+        <article class="card reveal" data-cycle="comunitat" style="--d:80ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-equal"/></svg></span>
+          <h3>Coeducació</h3>
+          <p>Escola adherida al Pacte local per la coeducació de Barberà.</p>
+        </article>
+
+        <article class="card reveal" data-cycle="mitja" style="--d:160ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-lang"/></svg></span>
+          <h3>Français</h3>
+          <p>El francès com a segona llengua estrangera: bonjour, Can Serra!</p>
+        </article>
+
+        <article class="card card-wide reveal" data-cycle="inicial">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-users"/></svg></span>
+          <h3>Fem comunitat</h3>
+          <p>Famílies, alumnat i mestres construïm l'escola plegats.</p>
+          <div class="card-foot">
+            <span class="chip">Bricoescola</span>
+            <span class="chip">Recooperem</span>
+            <span class="chip">Llibres socialitzats</span>
+            <span class="chip">Consell de famílies delegades</span>
+          </div>
+        </article>
+
+        <article class="card reveal" data-cycle="infantil" style="--d:80ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span>
+          <h3>Educació emocional</h3>
+          <p>Protagonista de la setmana, jocs de pati i suma't als bons hàbits.</p>
+        </article>
+
+        <article class="card reveal" data-cycle="superior" style="--d:160ms">
+          <span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-megaphone"/></svg></span>
+          <h3>Consell de delegats</h3>
+          <p>Delegades i delegats de cada classe donen veu a l'alumnat.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= NIVELLS: EL CAMÍ CAP AL CIM ================= -->
+  <section class="section" id="nivells">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Nivells</p>
+        <h2>De I3 a 6è: el camí cap al cim</h2>
+        <p class="lead">Nou cursos, quatre etapes i un color per a cadascuna. Tria una parada del camí per descobrir-la.</p>
+      </header>
+
+      <div class="climb">
+        <div class="climb-map reveal" aria-hidden="true">
+          <span class="climb-note">9 cursos,<br>1 cim!</span>
+          <svg viewBox="0 0 560 440">
+            <polygon class="mtn-back" points="-10,420 110,230 230,420"/>
+            <polygon class="mtn-back" points="340,420 460,190 580,420"/>
+            <polygon class="mtn-main" points="20,420 300,40 560,420"/>
+            <polygon class="snow" points="300,40 262,92 282,84 300,104 318,84 338,92"/>
+            <line x1="-10" y1="420" x2="580" y2="420" stroke="currentColor" stroke-width="2.5" style="color:var(--line-strong)"/>
+            <path class="trail" d="M120 398 C 250 390, 400 370, 400 316 C 400 270, 250 270, 240 226 C 232 186, 350 180, 340 138 C 332 100, 300 90, 300 60"/>
+            <line class="flag-pole" x1="300" y1="62" x2="300" y2="8"/>
+            <polygon class="flag-cloth" points="300,8 338,18 300,30"/>
+            <g class="station is-active" data-station="infantil" data-cycle="infantil"><circle class="ring" cx="120" cy="398" r="16"/><circle class="core" cx="120" cy="398" r="9"/><text x="94" y="403" text-anchor="end">Infantil</text></g>
+            <g class="station" data-station="inicial" data-cycle="inicial"><circle class="ring" cx="400" cy="316" r="16"/><circle class="core" cx="400" cy="316" r="9"/><text x="374" y="321" text-anchor="end">Cicle Inicial</text></g>
+            <g class="station" data-station="mitja" data-cycle="mitja"><circle class="ring" cx="240" cy="226" r="16"/><circle class="core" cx="240" cy="226" r="9"/><text x="266" y="231">Cicle Mitjà</text></g>
+            <g class="station" data-station="superior" data-cycle="superior"><circle class="ring" cx="340" cy="138" r="16"/><circle class="core" cx="340" cy="138" r="9"/><text x="314" y="143" text-anchor="end">Cicle Superior</text></g>
+          </svg>
+        </div>
+
+        <div class="reveal" style="--d:120ms">
+          <div class="tabs" role="tablist" aria-label="Etapes educatives">
+            <button class="tab" role="tab" id="tab-infantil" aria-controls="panel-infantil" aria-selected="true" data-cycle="infantil" data-tab="infantil"><span class="dot"></span>Infantil</button>
+            <button class="tab" role="tab" id="tab-inicial" aria-controls="panel-inicial" aria-selected="false" tabindex="-1" data-cycle="inicial" data-tab="inicial"><span class="dot"></span>Cicle Inicial</button>
+            <button class="tab" role="tab" id="tab-mitja" aria-controls="panel-mitja" aria-selected="false" tabindex="-1" data-cycle="mitja" data-tab="mitja"><span class="dot"></span>Cicle Mitjà</button>
+            <button class="tab" role="tab" id="tab-superior" aria-controls="panel-superior" aria-selected="false" tabindex="-1" data-cycle="superior" data-tab="superior"><span class="dot"></span>Cicle Superior</button>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-infantil" aria-labelledby="tab-infantil" data-cycle="infantil" tabindex="0">
+            <div class="panel-head"><h3>Educació Infantil</h3><span class="ages">3 a 6 anys</span></div>
+            <div class="courses"><span class="course">I3</span><span class="course">I4</span><span class="course">I5</span></div>
+            <p>Aprenem jugant, experimentant i fent-nos preguntes. Les Llunes i els Sols, els micos i les mones… cada grup té nom propi i cada infant és protagonista de la seva setmana.</p>
+            <ul class="highlights">
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg><div><b>Protagonista de la setmana</b><span>Coneixem cada família i la seva història.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-sprout"/></svg><div><b>Primera excursió</b><span>A la granja, per veure de prop els animals.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-tent"/></svg><div><b>Colònies d'I5</b><span>Pirates, tresors i gimcana al bosc a Can Ribes.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><div><b>Padrins i padrines</b><span>Els grans de primària ens acompanyen per Sant Jordi.</span></div></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-inicial" aria-labelledby="tab-inicial" data-cycle="inicial" tabindex="0" hidden>
+            <div class="panel-head"><h3>Cicle Inicial</h3><span class="ages">6 a 8 anys</span></div>
+            <div class="courses"><span class="course">1r</span><span class="course">2n</span></div>
+            <p>Llegir, escriure i descobrir el món a través de projectes. Els llibres que llegim a classe prenen vida quan les autores i els autors ens visiten.</p>
+            <ul class="highlights">
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg><div><b>Lectura compartida</b><span>Àlbums il·lustrats i visites d'autors.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-box"/></svg><div><b>Caixes d'investigació</b><span>Manipulem, observem i comprovem.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-tent"/></svg><div><b>Colònies de 2n</b><span>Ens convertim en paleontòlegs i paleontòlogues.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg><div><b>Sortides a la natura</b><span>Aprendre fora de l'aula també compta.</span></div></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-mitja" aria-labelledby="tab-mitja" data-cycle="mitja" tabindex="0" hidden>
+            <div class="panel-head"><h3>Cicle Mitjà</h3><span class="ages">8 a 10 anys</span></div>
+            <div class="courses"><span class="course">3r</span><span class="course">4t</span></div>
+            <p>Projectes d'aula amb nom propi, Science en anglès i molta cultura popular: del Barberapitec als balls de bastons.</p>
+            <ul class="highlights">
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-search"/></svg><div><b>Projectes d'aula</b><span>Cada classe tria el seu tema i l'investiga.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-music"/></svg><div><b>Cultura popular</b><span>Barberapitec a 3r i trobada d'escoles bastoneres a 4t.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg><div><b>Our Towns Project</b><span>Dissenyem ciutats en anglès amb eines digitals.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-tent"/></svg><div><b>Colònies de 4t</b><span>Natura, sol i vincles de grup.</span></div></li>
+            </ul>
+          </div>
+
+          <div class="panel" role="tabpanel" id="panel-superior" aria-labelledby="tab-superior" data-cycle="superior" tabindex="0" hidden>
+            <div class="panel-head"><h3>Cicle Superior</h3><span class="ages">10 a 12 anys</span></div>
+            <div class="courses"><span class="course">5è</span><span class="course">6è</span></div>
+            <p>Autonomia, lideratge i ganes de fer el salt a la secundària. Els grans de l'escola apadrinen els petits i es preparen per al cim.</p>
+            <ul class="highlights">
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg><div><b>Science Fair</b><span>Presentem els nostres experiments a tota l'escola.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-car"/></svg><div><b>Educació viària</b><span>Curs i karts a 5è, amb la Policia Local.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-tent"/></svg><div><b>Colònies de 6è</b><span>Paddle surf i caiac a Cala Gogo.</span></div></li>
+              <li class="highlight"><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg><div><b>Graduació</b><span>El passadís més emotiu de l'any.</span></div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= LA FARIGOLETA ================= -->
+  <section class="section farigoleta" id="farigoleta">
+    <div class="container fari-grid">
+      <div class="fari-art reveal" aria-hidden="true">
+        <div class="sun"></div>
+        <svg class="rays" viewBox="0 0 200 200">
+          <g transform="translate(100 100)">
+            <line x1="0" y1="-98" x2="0" y2="-88"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(22.5)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(45)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(67.5)"/>
+            <line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(90)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(112.5)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(135)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(157.5)"/>
+            <line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(180)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(202.5)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(225)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(247.5)"/>
+            <line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(270)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(292.5)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(315)"/><line x1="0" y1="-98" x2="0" y2="-88" transform="rotate(337.5)"/>
+          </g>
+        </svg>
+        <!-- Il·lustració geomètrica inspirada en la gegantona -->
+        <svg class="giant" viewBox="0 0 200 300">
+          <defs>
+            <clipPath id="skirt"><path d="M72 132 L128 132 L170 298 L30 298 Z"/></clipPath>
+          </defs>
+          <g clip-path="url(#skirt)">
+            <rect x="20" y="130" width="160" height="170" fill="#22b14c"/>
+            <rect x="34" y="130" width="14" height="170" fill="#ffd60a"/><rect x="62" y="130" width="14" height="170" fill="#ec3a2b"/>
+            <rect x="90" y="130" width="14" height="170" fill="#1c9be6"/><rect x="118" y="130" width="14" height="170" fill="#ffd60a"/>
+            <rect x="146" y="130" width="14" height="170" fill="#ec3a2b"/>
+          </g>
+          <path d="M72 132 L128 132 L170 298 L30 298 Z" fill="none" stroke="#16161d" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M80 108 Q100 100 120 108 L128 136 L72 136 Z" fill="#ec3a2b" stroke="#16161d" stroke-width="3" stroke-linejoin="round"/>
+          <path d="M79 114 Q60 150 58 190" fill="none" stroke="#16161d" stroke-width="12" stroke-linecap="round"/>
+          <path d="M79 114 Q60 150 58 190" fill="none" stroke="#f3c7a1" stroke-width="7" stroke-linecap="round"/>
+          <path d="M121 114 Q144 140 150 176" fill="none" stroke="#16161d" stroke-width="12" stroke-linecap="round"/>
+          <path d="M121 114 Q144 140 150 176" fill="none" stroke="#f3c7a1" stroke-width="7" stroke-linecap="round"/>
+          <g transform="translate(150 176) rotate(-18)">
+            <path d="M0 0 V-46" stroke="#0f5d27" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cx="-6" cy="-12" rx="6" ry="3" fill="#22b14c" transform="rotate(-30 -6 -12)"/><ellipse cx="6" cy="-20" rx="6" ry="3" fill="#22b14c" transform="rotate(30 6 -20)"/>
+            <ellipse cx="-6" cy="-28" rx="6" ry="3" fill="#22b14c" transform="rotate(-30 -6 -28)"/><ellipse cx="6" cy="-36" rx="5" ry="3" fill="#22b14c" transform="rotate(30 6 -36)"/>
+            <circle cx="0" cy="-48" r="4" fill="#b98bd6"/>
+          </g>
+          <rect x="93" y="88" width="14" height="18" fill="#f3c7a1" stroke="#16161d" stroke-width="3"/>
+          <circle cx="72" cy="52" r="13" fill="#5a2d1a" stroke="#16161d" stroke-width="3"/>
+          <circle cx="128" cy="52" r="13" fill="#5a2d1a" stroke="#16161d" stroke-width="3"/>
+          <circle cx="100" cy="64" r="30" fill="#f3c7a1" stroke="#16161d" stroke-width="3"/>
+          <path d="M70 60 Q72 30 100 32 Q128 30 130 60 Q118 44 100 46 Q82 44 70 60 Z" fill="#5a2d1a" stroke="#16161d" stroke-width="3" stroke-linejoin="round"/>
+          <circle cx="88" cy="36" r="5" fill="#ffd60a" stroke="#16161d" stroke-width="2"/><circle cx="100" cy="32" r="5" fill="#ec3a2b" stroke="#16161d" stroke-width="2"/><circle cx="112" cy="36" r="5" fill="#1c9be6" stroke="#16161d" stroke-width="2"/>
+          <circle cx="89" cy="66" r="3.2" fill="#16161d"/><circle cx="111" cy="66" r="3.2" fill="#16161d"/>
+          <circle cx="82" cy="76" r="5" fill="#ff8f82" opacity=".8"/><circle cx="118" cy="76" r="5" fill="#ff8f82" opacity=".8"/>
+          <path d="M92 78 Q100 86 108 78" fill="none" stroke="#16161d" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+        <span class="fari-bubble">Hola! Sóc la<br>Farigoleta</span>
+      </div>
+
+      <div class="fari-copy">
+        <header class="section-head reveal" style="margin:0">
+          <p class="eyebrow">La nostra gegantona</p>
+          <h2>Coneix la Farigoleta</h2>
+        </header>
+        <p class="lead reveal">Va néixer el curs 2010-11, durant una Setmana Cultural dedicada a la cultura popular, a partir de les històries i els dibuixos dels mateixos infants. El seu nom ve de l'Hostal La Farigola (1610), a l'entrada de Barberà.</p>
+        <ol class="fari-timeline reveal">
+          <li><b>2011</b><span>Batejada amb pètals de rosa al pati i primer ball a les festes del poble.</span></li>
+          <li><b>2022</b><span>Arriba a 6è, es fa gran i estrena un nou look.</span></li>
+          <li><b>2025</b><span>Encapçala la inauguració popular del Pont de la Farigola.</span></li>
+          <li><b>Avui</b><span>Surt a la samarreta de l'escola… i té Instagram!</span></li>
+        </ol>
+        <div class="reveal"><a class="btn" href="https://www.instagram.com/escolacanserra/"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg> Segueix les seves aventures</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= L'ANY A CAN SERRA ================= -->
+  <section class="section" id="any">
+    <div class="container">
+      <header class="section-head split reveal">
+        <div style="display:grid;gap:1rem;max-width:720px">
+          <p class="eyebrow">Festes i tradicions</p>
+          <h2>Un any a Can Serra</h2>
+        </div>
+        <div style="display:flex;gap:.5rem">
+          <button class="icon-btn" type="button" data-scroll="#year" data-dir="-1" aria-label="Mesos anteriors"><svg class="icon" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+          <button class="icon-btn" type="button" data-scroll="#year" data-dir="1" aria-label="Mesos següents"><svg class="icon" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+        </div>
+      </header>
+      <ol class="year" id="year" tabindex="0" aria-label="Calendari de festes del curs">
+        <li class="month" data-cycle="infantil"><div class="month-label"><span class="month-name">Setembre</span><svg class="icon" aria-hidden="true"><use href="#i-backpack"/></svg></div><h3>Tornem-hi!</h3><p>Inici de curs, full informatiu per a les famílies i reunions de presentació.</p></li>
+        <li class="month" data-cycle="superior"><div class="month-label"><span class="month-name">Octubre</span><svg class="icon" aria-hidden="true"><use href="#i-leaf"/></svg></div><h3>Castanyada</h3><p>Castanyes, moniatos i panellets per donar la benvinguda a la tardor.</p></li>
+        <li class="month" data-cycle="inicial"><div class="month-label"><span class="month-name">Desembre</span><svg class="icon" aria-hidden="true"><use href="#i-star"/></svg></div><h3>Nadal</h3><p>Cançons, tradicions i festa compartida abans de les vacances.</p></li>
+        <li class="month" data-cycle="mitja"><div class="month-label"><span class="month-name">Febrer</span><svg class="icon" aria-hidden="true"><use href="#i-mask"/></svg></div><h3>Carnestoltes i Setmana Cultural</h3><p>Disfresses i una setmana temàtica. D'una d'elles en va néixer la Farigoleta!</p></li>
+        <li class="month" data-cycle="superior"><div class="month-label"><span class="month-name">Abril</span><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></div><h3>Sant Jordi i Santa Jordina</h3><p>Jocs Florals, concurs de punts de llibre i la Festa de la Primavera.</p></li>
+        <li class="month" data-cycle="inicial"><div class="month-label"><span class="month-name">Maig</span><svg class="icon" aria-hidden="true"><use href="#i-tent"/></svg></div><h3>Escola viatgera</h3><p>Colònies al final de cada cicle: I5, 2n, 4t i 6è.</p></li>
+        <li class="month" data-cycle="mitja"><div class="month-label"><span class="month-name">Juny</span><svg class="icon" aria-hidden="true"><use href="#i-flask"/></svg></div><h3>Science Fair i danses</h3><p>La fira de ciència i la Jornada de Danses Tradicionals omplen el pati.</p></li>
+        <li class="month" data-cycle="comunitat"><div class="month-label"><span class="month-name">Juny</span><svg class="icon" aria-hidden="true"><use href="#i-grad"/></svg></div><h3>Graduació de 6è</h3><p>Discursos, records, alguna llàgrima… i la Farigoleta vestida de gala.</p></li>
+        <li class="month" data-cycle="infantil"><div class="month-label"><span class="month-name">Juliol</span><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></div><h3>Casal d'estiu</h3><p>L'estiu també es viu a Can Serra, amb l'AFA.</p></li>
+      </ol>
+      <p class="year-hint"><svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg> Llisca per veure tot el curs</p>
+    </div>
+  </section>
+
+  <!-- ================= NOTÍCIES ================= -->
+  <section class="section section-sunken" id="noticies">
+    <div class="container">
+      <header class="section-head split reveal">
+        <div style="display:grid;gap:1rem;max-width:720px">
+          <p class="eyebrow">Notícies</p>
+          <h2>Què passa a l'escola</h2>
+        </div>
+        <a class="btn" href="https://agora.xtec.cat/escolacanserra/categoria/portada/">Totes les notícies <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+      </header>
+
+      <div class="news">
+        <a class="news-card reveal" data-cycle="superior" href="https://agora.xtec.cat/escolacanserra/portada/graduacio-6e-25-26/">
+          <div class="cover" aria-hidden="true">
+            <svg class="cover-peaks" viewBox="0 0 320 120" preserveAspectRatio="none"><polygon points="130,120 230,6 340,120"/><polygon points="-20,120 80,26 180,120"/><polygon points="120,120 200,50 280,120"/></svg>
+            <span class="cover-icon"><svg class="icon"><use href="#i-grad"/></svg></span>
+            <span class="cover-word">Adéu, 6è!</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">Cicle Superior</span><span>Curs 25-26</span></div>
+            <h3>Graduació de 6è</h3>
+            <p>Amb la Farigoleta vestida de graduació, entre somriures, records i alguna llàgrima d'emoció, vam acomiadar una promoció que deixa una empremta ben especial.</p>
+            <span class="link-arrow">Llegeix-la <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+          </div>
+        </a>
+
+        <a class="news-card reveal" data-cycle="mitja" href="https://agora.xtec.cat/escolacanserra/portada/science-fair-2026/" style="--d:80ms">
+          <div class="cover" aria-hidden="true">
+            <svg class="cover-peaks" viewBox="0 0 320 120" preserveAspectRatio="none"><polygon points="-10,120 90,10 200,120"/><polygon points="150,120 250,30 350,120"/><polygon points="60,120 150,56 240,120"/></svg>
+            <span class="cover-icon"><svg class="icon"><use href="#i-flask"/></svg></span>
+            <span class="cover-word">Eureka!</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">Science</span><span>Curs 25-26</span></div>
+            <h3>Science Fair 2026</h3>
+            <p>Quarta edició de la nostra fira de ciència, amb l'alumnat de 4t, 5è i 6è com a protagonista. Gràcies a tots els infants i als mestres de Science!</p>
+            <span class="link-arrow">Llegeix-la <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+          </div>
+        </a>
+
+        <a class="news-card reveal" data-cycle="infantil" href="https://agora.xtec.cat/escolacanserra/infantil/la-nostra-primera-excursio-a-la-granja/" style="--d:160ms">
+          <div class="cover" aria-hidden="true">
+            <svg class="cover-peaks" viewBox="0 0 320 120" preserveAspectRatio="none"><polygon points="100,120 200,14 300,120"/><polygon points="-30,120 60,40 150,120"/><polygon points="170,120 250,60 330,120"/></svg>
+            <span class="cover-icon"><svg class="icon"><use href="#i-sprout"/></svg></span>
+            <span class="cover-word">Mu!</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">Infantil · I3</span><span>Curs 25-26</span></div>
+            <h3>La nostra primera excursió a la granja</h3>
+            <p>Després de setmanes parlant dels animals, mirant contes i aprenent cançons, les Llunes i els Sols els van poder veure de veritat.</p>
+            <span class="link-arrow">Llegeix-la <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+          </div>
+        </a>
+
+        <a class="news-card reveal" data-cycle="inicial" href="https://agora.xtec.cat/escolacanserra/portada/colonies-de-2n/">
+          <div class="cover" aria-hidden="true">
+            <svg class="cover-peaks" viewBox="0 0 320 120" preserveAspectRatio="none"><polygon points="40,120 140,8 240,120"/><polygon points="170,120 260,34 350,120"/><polygon points="-20,120 60,62 140,120"/></svg>
+            <span class="cover-icon"><svg class="icon"><use href="#i-tent"/></svg></span>
+            <span class="cover-word">Colònies!</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">Cicle Inicial · 2n</span><span>Curs 25-26</span></div>
+            <h3>Colònies de 2n</h3>
+            <p>Cançons del Dinosaure Jou, psicojump i jocs de nit amb llanternes: ens vam convertir en paleontòlegs i paleontòlogues!</p>
+            <span class="link-arrow">Llegeix-la <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+          </div>
+        </a>
+
+        <a class="news-card reveal" data-cycle="comunitat" href="https://agora.xtec.cat/escolacanserra/infantil/jornada-de-danses-tradicionals-2026/" style="--d:80ms">
+          <div class="cover" aria-hidden="true">
+            <svg class="cover-peaks" viewBox="0 0 320 120" preserveAspectRatio="none"><polygon points="-10,120 70,20 150,120"/><polygon points="120,120 220,10 320,120"/><polygon points="70,120 150,58 230,120"/></svg>
+            <span class="cover-icon"><svg class="icon"><use href="#i-music"/></svg></span>
+            <span class="cover-word">Ball!</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">Tota l'escola</span><span>Curs 25-26</span></div>
+            <h3>Jornada de Danses Tradicionals</h3>
+            <p>El pati s'omple de música, ritme i tradició: compartim les danses que hem treballat a música durant el trimestre.</p>
+            <span class="link-arrow">Llegeix-la <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+          </div>
+        </a>
+
+        <a class="news-card reveal" data-cycle="mitja" href="https://agora.xtec.cat/escolacanserra/portada/4a-trobada-descoles-bastoneres/" style="--d:160ms">
+          <div class="cover" aria-hidden="true">
+            <svg class="cover-peaks" viewBox="0 0 320 120" preserveAspectRatio="none"><polygon points="160,120 250,16 340,120"/><polygon points="20,120 110,30 200,120"/><polygon points="-30,120 40,64 110,120"/></svg>
+            <span class="cover-icon"><svg class="icon"><use href="#i-sparkles"/></svg></span>
+            <span class="cover-word">Clac, clac!</span>
+          </div>
+          <div class="news-body">
+            <div class="news-meta"><span class="tag">Cicle Mitjà · 4t</span><span>Curs 25-26</span></div>
+            <h3>4a trobada d'escoles bastoneres</h3>
+            <p>L'alumnat de 4t comparteix els balls de bastons amb la resta d'escoles de Barberà i Badia en una jornada de cultura popular.</p>
+            <span class="link-arrow">Llegeix-la <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= FAMÍLIES ================= -->
+  <section class="section" id="families">
+    <div class="container">
+      <header class="section-head reveal">
+        <p class="eyebrow">Famílies</p>
+        <h2>Tot el que necessites, a mà</h2>
+        <p class="lead">Horaris d'atenció, serveis de l'AFA i documents de centre en un sol lloc.</p>
+      </header>
+
+      <div class="families">
+        <div class="panel-card reveal">
+          <h3><svg class="icon" aria-hidden="true"><use href="#i-clock"/></svg> Horaris d'atenció</h3>
+          <ul class="hours">
+            <li><span class="who">Secretaria</span><span class="when">Dl–Dv · 9–10 h<br>Dl–Dj · 15–16.30 h</span></li>
+            <li><span class="who">Equip directiu</span><span class="when">Dc, Dj i Dv · 9–10 h<br>Tardes · 15–15.30 h</span><span class="note">Cal demanar hora per a entrevistes.</span></li>
+            <li><span class="who">Famílies – mestres</span><span class="when">Dl i Dc · 13.30–14 h</span><span class="note">Cal demanar hora per a entrevistes.</span></li>
+          </ul>
+          <p class="callout"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Per a qualsevol qüestió, parla primer amb la tutora o el tutor. Si queden dubtes, demana entrevista amb direcció.</span></p>
+        </div>
+
+        <div>
+          <ul class="services">
+            <li><a class="service reveal" data-cycle="infantil" href="https://agora.xtec.cat/escolacanserra/serveis/acollida/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-sun"/></svg></span><b>Acollida</b><span>Per facilitar la conciliació de les famílies.</span></a></li>
+            <li><a class="service reveal" data-cycle="superior" href="https://agora.xtec.cat/escolacanserra/serveis/menjador-escolar/" style="--d:80ms"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-chef"/></svg></span><b>Menjador</b><span>Amb cuina pròpia a l'escola des de 2019.</span></a></li>
+            <li><a class="service reveal" data-cycle="mitja" href="https://agora.xtec.cat/escolacanserra/serveis/activitats-extraescolars/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-ball"/></svg></span><b>Extraescolars</b><span>Activitats de tarda organitzades per l'AFA.</span></a></li>
+            <li><a class="service reveal" data-cycle="inicial" href="https://agora.xtec.cat/escolacanserra/serveis/casal-destiu/" style="--d:80ms"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-tree"/></svg></span><b>Casal d'estiu</b><span>L'estiu també es viu a Can Serra.</span></a></li>
+            <li><a class="service reveal" data-cycle="comunitat" href="https://agora.xtec.cat/escolacanserra/projecte-educatiu/llibres-socialitzats/"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg></span><b>Llibres socialitzats</b><span>Cooperativa de llibres compartits: menys despesa, més sostenibilitat.</span></a></li>
+            <li><a class="service reveal" data-cycle="superior" href="https://agora.xtec.cat/escolacanserra/general/ajuts-menjador-26-27/" style="--d:80ms"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-heart"/></svg></span><b>Ajuts de menjador</b><span>Convocatòria anual de l'Ajuntament de Barberà.</span></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="docs reveal">
+        <h3>Documents de centre</h3>
+        <div class="doc-list">
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/lescola/documents-de-centre/pec/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Projecte Educatiu (PEC)</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/normes-dorganitzacio-i-funcionament-de-centre-nofc/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>NOFC</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/normes-dorganitzacio-i-funcionament-de-centre-nofc/normes-de-convivencia/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Normes de convivència</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/lescola/documents-de-centre/projecte-de-convivencia/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Projecte de convivència</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/lescola/documents-de-centre/projecte-linguistic-de-centre/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Projecte lingüístic</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/pla-lector/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Pla lector</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/lescola/documents-de-centre/pla-anual/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Pla anual</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/lescola/documents-de-centre/projecte-de-direccio/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>Projecte de direcció</a>
+          <a class="doc" href="https://agora.xtec.cat/escolacanserra/lescola/documents-de-centre/pocat-altes-temperatures/"><svg class="icon" aria-hidden="true"><use href="#i-file"/></svg>POCAT · Altes temperatures</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BIBLIOTECA I INSTAL·LACIONS ================= -->
+  <section class="section section-sunken" id="espais">
+    <div class="container">
+      <figure class="mural reveal">
+        <img src="assets/img/mural-gubianas.jpg" alt="Mural il·lustrat per Valentí Gubianas a la biblioteca: personatges de conte volant al voltant d'una nena que llegeix" width="1600" height="426" loading="lazy">
+        <figcaption>Mural de Valentí Gubianas · Biblioteca de l'escola (curs 2018-19)</figcaption>
+      </figure>
+      <div class="biblio-grid">
+        <div class="biblio-copy reveal">
+          <p class="eyebrow">Espais</p>
+          <h2>Una biblioteca amb nom d'il·lustrador</h2>
+          <p>El curs 2018-19, l'il·lustrador Valentí Gubianas va pintar un mural a la nostra biblioteca i l'alumnat va votar per posar-li el seu nom.</p>
+          <p>Avui és un espai viu: biblioteca extraescolar gratuïta, Biblioteca Oberta amb narradores convidades, concursos de punts de llibre i el pla lector <em>Totes i tots llegim!</em></p>
+          <div><a class="link-arrow" href="https://agora.xtec.cat/escolacanserra/projecte-educatiu/biblioteca-extraescolar-gratuita/">Coneix la biblioteca <svg class="icon" aria-hidden="true"><use href="#i-arrow-ur"/></svg></a></div>
+        </div>
+        <div class="reveal" style="--d:120ms">
+          <p class="facilities-title">Instal·lacions</p>
+          <ul class="facilities">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-microscope"/></svg>Laboratori</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-book"/></svg>Biblioteca</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-chef"/></svg>Cuina pròpia</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-utensils"/></svg>Menjador</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-monitor"/></svg>Aula TAC i projector a totes les aules</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-music"/></svg>Aula de música</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-lang"/></svg>Aula d'anglès</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-wand"/></svg>Aula «màgica»</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mask"/></svg>Teatre</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-ball"/></svg>Pavelló i pistes</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-tree"/></svg>Patis d'infantil i primària</li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-lift"/></svg>Ascensor · sense barreres</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= HISTÒRIA ================= -->
+  <section class="section" id="historia">
+    <div class="container">
+      <header class="section-head split reveal">
+        <div style="display:grid;gap:1rem;max-width:720px">
+          <p class="eyebrow">Història</p>
+          <h2>Una serralada de 48 anys</h2>
+          <p class="lead">Cada fita és un cim. I el 2028 en farem 50.</p>
+        </div>
+        <div style="display:flex;gap:.5rem">
+          <button class="icon-btn" type="button" data-scroll="#timeline" data-dir="-1" aria-label="Fites anteriors"><svg class="icon" aria-hidden="true"><use href="#i-chev-l"/></svg></button>
+          <button class="icon-btn" type="button" data-scroll="#timeline" data-dir="1" aria-label="Fites següents"><svg class="icon" aria-hidden="true"><use href="#i-chev-r"/></svg></button>
+        </div>
+      </header>
+      <ol class="timeline" id="timeline" tabindex="0" aria-label="Fites de la història de l'escola">
+        <li class="milestone" data-cycle="superior"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">1978</span><h3>Neix l'escola</h3><p>16 mestres i Etelvina Salvador com a primera directora. El primer curs acaba amb 354 alumnes.</p></div></li>
+        <li class="milestone" data-cycle="mitja"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">1979</span><h3>Els cinc cims</h3><p>Neix l'emblema: cinc muntanyes que simbolitzen l'esperit cooperatiu.</p></div></li>
+        <li class="milestone" data-cycle="infantil"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">1989</span><h3>Escola en català</h3><p>El Consell Escolar aprova per unanimitat ser una escola plenament catalana.</p></div></li>
+        <li class="milestone" data-cycle="inicial"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">1992</span><h3>Arriba I3</h3><p>Comença a funcionar el nivell de 3 anys.</p></div></li>
+        <li class="milestone" data-cycle="comunitat"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">1997</span><h3>Nous espais</h3><p>Aula d'audiovisuals, música, idiomes, informàtica i teatre.</p></div></li>
+        <li class="milestone" data-cycle="superior"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">2003</span><h3>25 anys</h3><p>Escultura commemorativa de Ramon Cerezo i nou pati d'infantil.</p></div></li>
+        <li class="milestone" data-cycle="mitja"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">2010</span><h3>Nou logotip</h3><p>Cinc muntanyes de colors: anelles olímpiques, cinc continents, una serralada.</p></div></li>
+        <li class="milestone" data-cycle="infantil"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">2011</span><h3>La Farigoleta</h3><p>Batejada amb pètals de rosa, balla per primer cop a les festes del poble.</p></div></li>
+        <li class="milestone" data-cycle="inicial"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">2019</span><h3>Mural i cuina pròpia</h3><p>Biblioteca Valentí Gubianas, menjador ampliat i cuina a l'escola.</p></div></li>
+        <li class="milestone" data-cycle="superior"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">2025</span><h3>Pont de la Farigola</h3><p>La Farigoleta encapçala la inauguració popular del pont.</p></div></li>
+        <li class="milestone future" data-cycle="comunitat"><div class="milestone-peak"><svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon points="0,100 50,0 100,100"/></svg></div><div class="milestone-line"></div><div class="milestone-body"><span class="milestone-year">2028</span><h3>50 anys!</h3><p>Mig segle de Can Serra. El proper cim el pugem junts.</p></div></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= PORTES OBERTES ================= -->
+  <section class="cta-band" id="portes-obertes">
+    <div class="container">
+      <div class="cta-box reveal">
+        <div>
+          <span class="hand">Vine a conèixer-nos!</span>
+          <h2>Portes obertes i preinscripció</h2>
+          <p>Visita l'escola, coneix l'equip i descobreix els nostres espais i projectes. Publicarem les dates del curs 2027-28 aquí i a Dinantia.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-primary btn-lg" href="https://agora.xtec.cat/escolacanserra/categoria/preinscripcio/">Informació de preinscripció <svg class="icon icon-arrow" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+          <a class="btn" href="mailto:escolacanserra@xtec.cat?subject=Portes%20obertes"><svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg> Avisa'm de les dates</a>
+        </div>
+        <svg class="cta-peaks" viewBox="0 0 360 200" aria-hidden="true"><polygon points="0,200 90,40 180,200"/><polygon points="120,200 230,0 340,200"/><polygon points="240,200 300,90 360,200"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CONTACTE ================= -->
+  <section class="section" id="contacte" style="padding-top:var(--space-7)">
+    <div class="container contact">
+      <div class="reveal">
+        <p class="eyebrow">Contacte</p>
+        <h2 style="font-size:var(--text-3xl);letter-spacing:var(--tracking-tight);line-height:1.04;font-weight:800;margin-top:1rem">Parlem?</h2>
+        <div class="contact-list">
+          <div class="contact-item" data-cycle="superior"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span><div><small>Adreça</small><b>C. Abat Oliba, 17 · 08210 Barberà del Vallès</b></div></div>
+          <a class="contact-item" data-cycle="mitja" href="tel:+34937185654"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-phone"/></svg></span><div><small>Telèfon</small><b>937 185 654</b></div></a>
+          <a class="contact-item" data-cycle="inicial" href="mailto:escolacanserra@xtec.cat"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></span><div><small>Correu</small><b>escolacanserra@xtec.cat</b></div></a>
+          <div class="contact-item" data-cycle="infantil"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg></span><div><small>Codi de centre</small><b>08033602</b></div></div>
+        </div>
+      </div>
+      <div class="map reveal" style="--d:120ms">
+        <iframe title="Mapa de situació de l'Escola Can Serra" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=2.1218%2C41.5088%2C2.1349%2C41.5143&amp;layer=mapnik&amp;marker=41.51153%2C2.12835"></iframe>
+        <a class="btn btn-yellow" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.51153,2.12835"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Com arribar-hi</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <svg class="footer-range" viewBox="0 0 1200 130" preserveAspectRatio="none" aria-hidden="true">
+    <polygon points="0,130 110,40 230,130" style="fill:var(--vermell-500)"/>
+    <polygon points="170,130 330,10 490,130" style="fill:var(--blau-500)"/>
+    <polygon points="420,130 560,50 700,130" style="fill:var(--groc-500)"/>
+    <polygon points="620,130 790,18 960,130" style="fill:var(--verd-500)"/>
+    <polygon points="900,130 1050,44 1200,130" style="fill:var(--vermell-500)"/>
+    <polygon class="fk" points="-40,130 60,86 180,130 300,70 420,130 540,90 660,130 780,66 900,130 1020,84 1140,130 1240,96 1240,131 -40,131"/>
+  </svg>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="#inici" aria-label="Escola Can Serra, torna a l'inici">
+        <svg class="brand-mark" aria-hidden="true"><use href="#logo-cims"/></svg>
+        <span class="brand-text"><span class="brand-escola">Escola</span><span class="brand-name">Can Serra</span></span>
+      </a>
+      <p class="footer-motto">5 colors · 1 serralada · molts cims</p>
+      <div class="badges"><span>Pacte local per la coeducació</span><span>Centre formador</span><span>Escola sense barreres</span></div>
+    </div>
+    <div>
+      <h4>L'escola</h4>
+      <ul class="footer-links">
+        <li><a href="https://agora.xtec.cat/escolacanserra/lescola/historia/">Història</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/lescola/equiphuma/">Equip educatiu</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/lescola/trets-didentitat/">Trets d'identitat</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/lescola/consell-escolar-2/">Consell Escolar</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/lescola/centre-formador/">Centre formador</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Famílies</h4>
+      <ul class="footer-links">
+        <li><a href="https://agora.xtec.cat/escolacanserra/cursactual/calendari-del-curs/">Calendari 26-27</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/cursactual/llibres-de-text/">Llibres de text</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/lescola/material-escolar/">Material escolar</a></li>
+        <li><a href="https://agora.xtec.cat/escolacanserra/cursactual/sortides-i-colonies/">Sortides i colònies</a></li>
+        <li><a href="https://afacanserra.cat/">AFA Can Serra</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Segueix-nos</h4>
+      <div class="socials">
+        <a href="https://www.instagram.com/escolacanserra/" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"/></svg></a>
+        <a href="https://www.facebook.com/escolacanserra" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"/></svg></a>
+        <a href="https://www.youtube.com/ceipcanserra" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"/></svg></a>
+      </div>
+      <h4 style="margin-top:1.5rem">Contacte</h4>
+      <ul class="footer-links">
+        <li><a href="tel:+34937185654">937 185 654</a></li>
+        <li><a href="mailto:escolacanserra@xtec.cat">escolacanserra@xtec.cat</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <span>© 2026 Escola Can Serra · Departament d'Educació · Generalitat de Catalunya</span>
+    <nav aria-label="Enllaços legals">
+      <a href="https://agora.xtec.cat/escolacanserra/">Web actual</a>
+      <a href="design-system.html">Design system</a>
+      <span>Proposta de redisseny · prototip</span>
+    </nav>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
