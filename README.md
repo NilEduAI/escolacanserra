@@ -17,10 +17,15 @@ Prototip navegable d'un nou web per a l'[Escola Can Serra](https://agora.xtec.ca
 | `assets/css/tokens.css` | **Tokens de disseny** (colors, tipografia, espai, radis, ombres, moviment) en variables CSS, amb tema clar i fosc. |
 | `assets/css/main.css` | Components i maquetació. Només usa tokens. |
 | `assets/css/ds.css` | Estils de la pàgina de documentació. |
-| `assets/js/main.js` | Interaccions sense dependències: menú mòbil, mode fosc, mida del text, pestanyes, animacions. |
+| `404.html` | Pàgina d'error pròpia («Aquest cim encara no l'hem pujat»). |
+| `assets/js/main.js` | Interaccions sense dependències: menú mòbil, mode fosc, mida del text, pestanyes, mapa sota demanda, animacions. |
+| `assets/js/theme-init.js` | Aplica el tema i la mida de text desats abans de pintar la pàgina. |
+| `assets/fonts/`, `assets/css/fonts.css` | Tipografies autoallotjades. |
+| `assets/img/og.png` | Imatge de previsualització per a xarxes i xats (font: `scripts/og-image.html`). |
+| `vercel.json`, `scripts/vercel-build.mjs` | Configuració i build per publicar a Vercel. |
 | `assets/icons.svg` | Sprite d'icones i isotip vectorial. |
 | `scripts/build.py` | Injecta el sprite a les pàgines i genera versions d'un sol fitxer a `dist/`. |
-| `dist/` | `index.html` i `design-system.html` **autocontinguts** (CSS, JS i imatges incrustats) per compartir per correu o obrir sense servidor. |
+| `dist/` | `index.html` i `design-system.html` **autocontinguts** (CSS, JS, tipografies i imatges incrustats) per compartir per correu o obrir sense servidor. |
 
 ## Com veure-ho
 
@@ -33,6 +38,28 @@ Si modifiques les icones o els estils, regenera:
 ```bash
 python3 scripts/build.py
 ```
+
+## Publicar a Vercel
+
+El repositori ja està configurat (`vercel.json`). Només cal:
+
+1. A [vercel.com/new](https://vercel.com/new), importa el repositori `NilEduAI/escolacanserra`.
+2. Deixa el *Framework Preset* a **Other** i no toquis res més: `vercel.json` ja defineix el build (`node scripts/vercel-build.mjs`) i la carpeta de sortida (`public/`).
+3. **Deploy.**
+
+Què fa la configuració:
+
+- **URL netes:** `/design-system` en lloc de `/design-system.html`, i una pàgina **404** pròpia.
+- **Previsualització als xats:** el build posa URL absolutes a les etiquetes Open Graph (amb el domini de producció de Vercel), perquè WhatsApp, Teams o el correu mostrin la imatge `assets/img/og.png`. Amb un domini propi, afegeix la variable d'entorn `SITE_URL` (p. ex. `web.escolacanserra.cat`).
+- **No indexació:** és un prototip no oficial, així que porta `noindex` (etiqueta i capçalera `X-Robots-Tag`) i una franja que enllaça al web oficial. **Quan l'escola l'aprovi**, esborra `<meta name="robots">` de les pàgines i la capçalera `X-Robots-Tag` de `vercel.json`.
+- **Seguretat:** capçaleres CSP, `nosniff`, `Referrer-Policy` i `Permissions-Policy`. No hi ha cap script en línia ni de tercers.
+
+### Privacitat (RGPD)
+
+- **Tipografies autoallotjades** a `assets/fonts/` (llicència SIL OFL): el web no fa cap petició a Google.
+- **El mapa no es carrega fins que es clica** «Mostra el mapa»: cap petició a OpenStreetMap sense consentiment.
+- **Sense galetes ni analítica.** El tema i la mida de text es desen només al navegador (`localStorage`).
+- **Sense fotos d'alumnes.**
 
 ## El design system en 30 segons
 
@@ -53,5 +80,5 @@ Els textos surten del web actual de l'escola (història, trets d'identitat, proj
 ## Possibles passos següents
 
 1. Validar la proposta amb l'equip directiu i el claustre.
-2. Traslladar els tokens i components al web actual (Àgora/WordPress admet CSS addicional) o publicar-lo com a web estàtic.
+2. Traslladar els tokens i components al web actual (Àgora/WordPress admet CSS addicional) o mantenir-lo com a web estàtic a Vercel.
 3. Crear plantilles per a circulars, cartells i xarxes amb el mateix sistema.

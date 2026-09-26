@@ -1,0 +1,5 @@
+# Sortida del build de Vercel
+public/
+.vercel/
+node_modules/
+.DS_Store

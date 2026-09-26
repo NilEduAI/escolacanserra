@@ -7,16 +7,27 @@
   <meta name="description" content="Escola pública d'educació infantil i primària a Barberà del Vallès. 5 colors, 1 serralada, molts cims. Des de 1978.">
   <meta name="theme-color" content="#fffbf3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f14" media="(prefers-color-scheme: dark)">
+  <!-- Prototip no oficial: que no l'indexin els cercadors fins que l'escola l'aprovi -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Escola Can Serra · Proposta de web">
   <meta property="og:title" content="Escola Can Serra · 5 colors, 1 serralada, molts cims">
-  <meta property="og:description" content="Escola pública d'infantil i primària a Barberà del Vallès, des de 1978.">
-  <meta property="og:image" content="assets/img/facana.jpg">
+  <meta property="og:description" content="Proposta de nou web i design system per a l'escola pública d'infantil i primària de Barberà del Vallès.">
+  <meta property="og:url" content="/">
+  <meta property="og:image" content="/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Cinc cims de colors i el lema 5 colors, 1 serralada, molts cims">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Cpolygon points='0,52 24,6 48,52' fill='%23ec3a2b'/%3E%3Cpolygon points='36,52 60,6 84,52' fill='%231c9be6'/%3E%3Cpolygon points='72,52 96,6 120,52' fill='%23ffd60a'/%3E%3Cpolygon points='18,80 42,34 66,80' fill='%2322b14c'/%3E%3Cpolygon points='54,80 78,34 102,80' fill='%2316161d'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600;700&display=swap">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/main.css">
-  <script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t;var s=localStorage.getItem('cs-size');if(s)document.documentElement.style.fontSize=[100,112.5,125][+s]+'%'}catch(e){}</script>
+  <script src="assets/js/theme-init.js"></script>
 </head>
 <body>
 <!-- sprite:start -->
@@ -97,7 +108,7 @@
 
 <a class="skip-link" href="#main">Salta al contingut</a>
 
-<div class="proto-bar"><b>Proposta</b> de nou web per a l'Escola Can Serra · prototip navegable · <a href="design-system.html">Descobreix el design system →</a></div>
+<div class="proto-bar"><b>Proposta</b> de nou web · prototip no oficial · Web oficial: <a href="https://agora.xtec.cat/escolacanserra/">agora.xtec.cat/escolacanserra</a> · <a href="design-system.html">Design system →</a></div>
 
 <header class="site-header" data-header>
   <div class="container header-inner">
@@ -787,8 +798,15 @@
           <div class="contact-item" data-cycle="infantil"><span class="bubble"><svg class="icon" aria-hidden="true"><use href="#i-school"/></svg></span><div><small>Codi de centre</small><b>08033602</b></div></div>
         </div>
       </div>
-      <div class="map reveal" style="--d:120ms">
-        <iframe title="Mapa de situació de l'Escola Can Serra" loading="lazy" src="https://www.openstreetmap.org/export/embed.html?bbox=2.1218%2C41.5088%2C2.1349%2C41.5143&amp;layer=mapnik&amp;marker=41.51153%2C2.12835"></iframe>
+      <!-- El mapa no es carrega fins que es demana: cap petició a tercers sense consentiment -->
+      <div class="map reveal" style="--d:120ms" data-map="https://www.openstreetmap.org/export/embed.html?bbox=2.1218%2C41.5088%2C2.1349%2C41.5143&amp;layer=mapnik&amp;marker=41.51153%2C2.12835">
+        <div class="map-placeholder">
+          <span class="map-pin"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg></span>
+          <b>C. Abat Oliba, 17</b>
+          <span>Barri de Can Serra · Barberà del Vallès</span>
+          <button class="btn btn-sm" type="button" data-map-load>Mostra el mapa</button>
+          <small>Es carregarà des d'OpenStreetMap.</small>
+        </div>
         <a class="btn btn-yellow" href="https://www.google.com/maps/dir/?api=1&amp;destination=41.51153,2.12835"><svg class="icon" aria-hidden="true"><use href="#i-pin"/></svg> Com arribar-hi</a>
       </div>
     </div>

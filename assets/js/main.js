@@ -140,6 +140,29 @@
     track.scrollBy({ left: Number(b.dataset.dir) * track.clientWidth * 0.8, behavior: reduceMotion ? 'auto' : 'smooth' });
   }));
 
+  /* ---- Mapa sota demanda (sense peticions a tercers fins que es demana) ---- */
+  $$('[data-map]').forEach((box) => {
+    const btn = $('[data-map-load]', box);
+    btn?.addEventListener('click', () => {
+      const frame = document.createElement('iframe');
+      frame.title = "Mapa de situació de l'Escola Can Serra";
+      frame.src = box.dataset.map;
+      box.prepend(frame);
+      $('.map-placeholder', box)?.remove();
+      frame.focus();
+    });
+  });
+
+  /* ---- Design system: graella d'icones generada des del sprite ---- */
+  const iconGrid = $('[data-icon-grid]');
+  if (iconGrid) {
+    const ids = $$('symbol[id^="i-"]').map((s) => s.id);
+    iconGrid.innerHTML = ids.map((id) => `<div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#${id}"/></svg>${id}</div>`).join('');
+    const count = $('[data-icon-count]');
+    if (count) count.textContent = String(ids.length);
+  }
+  $$('[data-demo-form]').forEach((f) => f.addEventListener('submit', (e) => e.preventDefault()));
+
   /* ---- Design system: copiar valors ---- */
   $$('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
     const value = b.dataset.copy;

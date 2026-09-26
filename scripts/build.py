@@ -3,8 +3,12 @@
 
 1. Injecta el sprite d'icones (assets/icons.svg) a totes les pàgines HTML
    entre els marcadors <!-- sprite:start --> i <!-- sprite:end -->.
-2. Genera versions autocontingudes a dist/ (CSS, JS i imatges incrustats)
-   per poder compartir cada pàgina com un únic fitxer .html.
+2. Genera versions autocontingudes a dist/ (CSS, JS, tipografies i imatges
+   incrustats) per poder compartir cada pàgina com un únic fitxer .html.
+
+Per publicar a Vercel no cal executar-lo: el build de Vercel és
+scripts/vercel-build.mjs. Només cal tornar-lo a passar (i fer commit) si
+canvies assets/icons.svg o vols regenerar dist/.
 
 Ús:  python3 scripts/build.py
 """
@@ -15,8 +19,11 @@ import mimetypes
 import re
 from pathlib import Path
 
+mimetypes.add_type("font/woff2", ".woff2")
+
 ROOT = Path(__file__).resolve().parent.parent
-PAGES = ["index.html", "design-system.html"]
+PAGES = ["index.html", "design-system.html", "404.html"]  # reben el sprite
+BUNDLES = ["index.html", "design-system.html"]  # versions d'un sol fitxer a dist/
 SPRITE_RE = re.compile(r"(<!-- sprite:start -->)(.*?)(<!-- sprite:end -->)", re.S)
 
 
@@ -42,7 +49,12 @@ def bundle(name: str) -> None:
     html = (ROOT / name).read_text(encoding="utf-8")
 
     def css(m: re.Match) -> str:
-        return f"<style>\n{(ROOT / m.group(1)).read_text(encoding='utf-8')}\n</style>"
+        path = ROOT / m.group(1)
+        text = path.read_text(encoding="utf-8")
+        # Tipografies i altres recursos referenciats des del CSS → data URI
+        text = re.sub(r"url\((\.\./[^)]+)\)",
+                      lambda u: f"url({data_uri((path.parent / u.group(1)).resolve())})", text)
+        return f"<style>\n{text}\n</style>"
 
     def js(m: re.Match) -> str:
         return f"<script>\n{(ROOT / m.group(1)).read_text(encoding='utf-8')}\n</script>"
@@ -50,6 +62,7 @@ def bundle(name: str) -> None:
     def img(m: re.Match) -> str:
         return f'{m.group(1)}="{data_uri(ROOT / m.group(2))}"'
 
+    html = re.sub(r'\s*<link rel="preload"[^>]*>', "", html)
     html = re.sub(r'<link rel="stylesheet" href="(assets/[^"]+\.css)">', css, html)
     html = re.sub(r'<script src="(assets/[^"]+\.js)"></script>', js, html)
     html = re.sub(r'(src|content)="(assets/img/[^"]+)"', img, html)
@@ -64,6 +77,6 @@ def bundle(name: str) -> None:
 
 if __name__ == "__main__":
     inject_sprite()
-    for page in PAGES:
+    for page in BUNDLES:
         if (ROOT / page).exists():
             bundle(page)

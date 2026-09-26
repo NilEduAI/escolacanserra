@@ -5,21 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Design System · Escola Can Serra</title>
   <meta name="description" content="Design system de l'Escola Can Serra: logotip, colors, tipografia, patrons, icones, components, veu i accessibilitat.">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ca_ES">
+  <meta property="og:site_name" content="Escola Can Serra · Proposta de web">
+  <meta property="og:title" content="Design System · Escola Can Serra">
+  <meta property="og:description" content="Logotip, colors, tipografia, patrons, icones, components i accessibilitat de l'Escola Can Serra.">
+  <meta property="og:url" content="/design-system">
+  <meta property="og:image" content="/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
   <meta name="theme-color" content="#fffbf3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#0f0f14" media="(prefers-color-scheme: dark)">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 80'%3E%3Cpolygon points='0,52 24,6 48,52' fill='%23ec3a2b'/%3E%3Cpolygon points='36,52 60,6 84,52' fill='%231c9be6'/%3E%3Cpolygon points='72,52 96,6 120,52' fill='%23ffd60a'/%3E%3Cpolygon points='18,80 42,34 66,80' fill='%2322b14c'/%3E%3Cpolygon points='54,80 78,34 102,80' fill='%2316161d'/%3E%3C/svg%3E">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=Caveat:wght@600;700&display=swap">
+  <link rel="preload" href="assets/fonts/bricolage-grotesque-var-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/atkinson-hyperlegible-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/fonts.css">
   <link rel="stylesheet" href="assets/css/tokens.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/ds.css">
-  <style>
-    .header-actions .ds-back { display: inline-flex; }
-    .ds-chip { display: inline-flex; align-items: center; padding: .3rem .75rem; border-radius: var(--radius-pill); background: var(--surface-inverse); color: var(--text-inverse); font-size: var(--text-xs); font-weight: 700; letter-spacing: .04em; }
-    @media (max-width: 560px) { .ds-chip { display: none; } .ds-back span { display: none; } }
-  </style>
-  <script>try{var t=localStorage.getItem('cs-theme');if(t)document.documentElement.dataset.theme=t;var s=localStorage.getItem('cs-size');if(s)document.documentElement.style.fontSize=[100,112.5,125][+s]+'%'}catch(e){}</script>
+  <script src="assets/js/theme-init.js"></script>
 </head>
 <body>
 <!-- sprite:start -->
@@ -512,7 +519,7 @@
             <p class="callout" style="margin:0"><svg class="icon" aria-hidden="true"><use href="#i-info"/></svg><span>Per a qualsevol qüestió, parla primer amb la tutora o el tutor.</span></p>
             <div class="demo-row" style="margin-top:1rem"><span class="stamp" style="position:relative;inset:auto;width:112px" aria-hidden="true"><svg viewBox="0 0 128 128"><defs><path id="stamp-circle-ds" d="M64,64 m-50,0 a50,50 0 1,1 100,0 a50,50 0 1,1 -100,0"/></defs><text><textPath href="#stamp-circle-ds" textLength="312" lengthAdjust="spacing">Escola pública · Barberà del Vallès ·</textPath></text></svg><span class="stamp-center"><small>des de</small><b>1978</b></span></span><span style="font-size:var(--text-sm)">Segell giratori</span></div>
           </div>
-          <form class="demo" onsubmit="return false"><span class="demo-label">.field · .input</span>
+          <form class="demo" data-demo-form><span class="demo-label">.field · .input</span>
             <div style="display:grid;gap:1rem">
               <div class="field"><label for="f-nom">Nom de la família</label><input class="input" id="f-nom" placeholder="p. ex. Família Serra Badia"></div>
               <div class="field"><label for="f-curs">Curs de l'infant</label><select class="input" id="f-curs"><option>I3</option><option>I4</option><option>I5</option><option>1r</option><option>2n</option></select><span class="field-hint">Curs 2027-28</span></div>
@@ -592,18 +599,5 @@
 </footer>
 
 <script src="assets/js/main.js"></script>
-<script>
-  // Genera la graella d'icones a partir del sprite
-  (function () {
-    var grid = document.querySelector('[data-icon-grid]');
-    if (!grid) return;
-    var ids = Array.prototype.map.call(document.querySelectorAll('symbol[id^="i-"]'), function (s) { return s.id; });
-    grid.innerHTML = ids.map(function (id) {
-      return '<div class="icon-tile"><svg class="icon" aria-hidden="true"><use href="#' + id + '"/></svg>' + id + '</div>';
-    }).join('');
-    var count = document.querySelector('[data-icon-count]');
-    if (count) count.textContent = ids.length;
-  })();
-</script>
 </body>
 </html>
